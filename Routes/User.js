@@ -50,7 +50,7 @@ router.put('/', (req, res) => {
     });
 });
 
-router.get('/:userId', (req, res) => {
+router.get('/single/:userId', (req, res) => {
     let userId = '';
     console.log(req.params.userId);
     try{

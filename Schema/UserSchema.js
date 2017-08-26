@@ -17,7 +17,7 @@ const UserSchema = new Schema(
         },
         longitude: {
             type: Number
-        }
+        },
     },
     {
         collection: 'users',
