@@ -22,16 +22,18 @@ const TaskSchema = new Schema(
             type: String,
             required: true
         },
-        latitude: {
-            type: Number,
-            required: true
-        },
-        longitude: {
-            type: Number,
-            required: true
+        loc: {
+            type: {
+                type:String
+            },
+            coordinates: [Number] 
         },
         createdBy: {
             type: Schema.Types.ObjectId,
+            required: true
+        },
+        joinedUsers: {
+            type: [Schema.Types.ObjectId],
             required: true
         }
     },
@@ -40,5 +42,7 @@ const TaskSchema = new Schema(
         autoIndex: true
     }
 );
+
+TaskSchema.index({loc: '2dsphere'});
 
 module.exports = TaskSchema;
