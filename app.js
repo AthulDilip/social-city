@@ -40,6 +40,6 @@ app.use(bodyParser.json())
 app.use('/v1/user', user)
 app.use('/v1/task', task)
 
-app.listen(3001, () => {
-    console.log("Connected to PORT : 3001")
+app.listen(3007, () => {
+    console.log("Connected to PORT : 3007")
 })
